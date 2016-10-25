@@ -19,7 +19,7 @@ feature 'Sign out', :devise do
   #   Then I see a signed out message
   scenario 'user signs out successfully' do
     click_link 'Sign out'
-    fail "replace with your test here"
+    expect(page).to have_content I18n.t 'devise.sessions.signed_out'
     # Add your test for this
     # HINT: identify the sign out message and test that
   end
